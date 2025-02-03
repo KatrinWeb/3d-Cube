@@ -1,0 +1,72 @@
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .shape {
+            width: 200px;
+            height: 200px;
+            perspective: 1200px;
+        }
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease-out;
+        }
+        .front {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #3bc45f;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .point {
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+        }
+        /* Position of points */
+        .one .point { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .two .point:nth-child(1) { top: 25%; left: 25%; }
+        .two .point:nth-child(2) { bottom: 25%; right: 25%; }
+        .three .point:nth-child(1) { top: 20%; left: 20%; }
+        .three .point:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .three .point:nth-child(3) { bottom: 20%; right: 20%; }
+        .four .point:nth-child(1) { top: 25%; left: 25%; }
+        .four .point:nth-child(2) { top: 25%; right: 25%; }
+        .four .point:nth-child(3) { bottom: 25%; left: 25%; }
+        .four .point:nth-child(4) { bottom: 25%; right: 25%; }
+        .five .point:nth-child(1) { top: 25%; left: 25%; }
+        .five .point:nth-child(2) { top: 25%; right: 25%; }
+        .five .point:nth-child(3) { bottom: 25%; left: 25%; }
+        .five .point:nth-child(4) { bottom: 25%; right: 25%; }
+        .five .point:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .six .point:nth-child(1) { top: 20%; left: 25%; }
+        .six .point:nth-child(2) { top: 20%; right: 25%; }
+        .six .point:nth-child(3) { bottom: 20%; left: 25%; }
+        .six .point:nth-child(4) { bottom: 20%; right: 25%; }
+        .six .point:nth-child(5) { center: 50%; left: 25%; }
+        .six .point:nth-child(6) { center: 50%; right: 25%; }
+
+        /* Position of borders */
+        .front  { transform: rotateY(  0deg) translateZ(100px); }
+        .back   { transform: rotateY(180deg) translateZ(100px); }
+        .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .right  { transform: rotateY( 90deg) translateZ(100px); }
+        .top    { transform: rotateX( 90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+        button {
+			margin-bottom: 120px;
+			padding: 20px 30px;
+			font-size: 19px;
+			cursor: pointer;
+        }
